@@ -1,0 +1,21 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+
+  &__btn {
+    padding: 6px 14px;
+    cursor: pointer;
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+  }
+
+  &__info,
+  &__total {
+    font-size: 14px;
+  }
+}

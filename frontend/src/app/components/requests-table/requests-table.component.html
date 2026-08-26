@@ -1,0 +1,26 @@
+<div class="requests-table-container">
+  <div *ngIf="items.length === 0" class="empty-message">
+    לא נמצאו בקשות התואמות לחיפוש
+  </div>
+
+  <table *ngIf="items.length > 0" class="requests-table">
+    <thead>
+      <tr>
+        <th *ngFor="let col of columns" (click)="onSort(col.key)" class="sortable-header">
+          {{ col.label }}
+          <span class="sort-indicator">{{ getSortIndicator(col.key) }}</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items">
+        <td>{{ item.id }}</td>
+        <td>{{ item.requestNumber }}</td>
+        <td>{{ item.status }}</td>
+        <td>{{ item.requestType }}</td>
+        <td>{{ item.createdAt }}</td>
+        <td>{{ item.ownerId }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

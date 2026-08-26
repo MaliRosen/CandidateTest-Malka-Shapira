@@ -1,0 +1,13 @@
+# Build outputs
+**/bin/
+**/obj/
+
+# Visual Studio
+.vs/
+*.user
+
+# Node
+frontend/node_modules/
+
+# Kiro
+.kiro/

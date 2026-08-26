@@ -1,0 +1,19 @@
+<div class="pagination" dir="rtl">
+  <button
+    class="pagination__btn"
+    [disabled]="isPrevDisabled"
+    (click)="onPrev()">
+    הקודם
+  </button>
+
+  <span class="pagination__info">עמוד {{ page }}</span>
+
+  <button
+    class="pagination__btn"
+    [disabled]="isNextDisabled"
+    (click)="onNext()">
+    הבא
+  </button>
+
+  <span class="pagination__total">סה״כ {{ totalCount }} רשומות</span>
+</div>
